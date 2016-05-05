@@ -16,6 +16,7 @@ from .ranking import dcg_score
 from .ranking import ndcg_score
 
 from .classification import accuracy_score
+from .classification import balanced_accuracy_score
 from .classification import classification_report
 from .classification import cohen_kappa_score
 from .classification import confusion_matrix
@@ -29,7 +30,6 @@ from .classification import matthews_corrcoef
 from .classification import precision_recall_fscore_support
 from .classification import precision_score
 from .classification import recall_score
-from .classification import balanced_accuracy_score
 from .classification import zero_one_loss
 from .classification import brier_score_loss
 
@@ -71,6 +71,7 @@ __all__ = [
     'adjusted_rand_score',
     'auc',
     'average_precision_score',
+    'balanced_accuracy_score',
     'calinski_harabaz_score',
     'classification_report',
     'cluster',
@@ -111,7 +112,6 @@ __all__ = [
     'precision_score',
     'r2_score',
     'recall_score',
-    'balanced_accuracy_score',
     'roc_auc_score',
     'roc_curve',
     'SCORERS',
