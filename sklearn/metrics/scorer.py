@@ -27,7 +27,8 @@ from . import (r2_score, median_absolute_error, mean_absolute_error,
                mean_squared_error, mean_squared_log_error, accuracy_score,
                f1_score, roc_auc_score, average_precision_score,
                precision_score, recall_score, log_loss,
-               explained_variance_score, brier_score_loss)
+               explained_variance_score, brier_score_loss,
+               balanced_accuracy_score)
 
 from .cluster import adjusted_rand_score
 from .cluster import homogeneity_score
@@ -500,6 +501,7 @@ median_absolute_error_scorer._deprecation_msg = deprecation_msg
 # Standard Classification Scores
 accuracy_scorer = make_scorer(accuracy_score)
 f1_scorer = make_scorer(f1_score)
+balanced_accuracy_scorer = make_scorer(balanced_accuracy_score)
 
 # Score functions that need decision values
 roc_auc_scorer = make_scorer(roc_auc_score, greater_is_better=True,
@@ -543,6 +545,7 @@ SCORERS = dict(explained_variance=explained_variance_scorer,
                mean_absolute_error=mean_absolute_error_scorer,
                mean_squared_error=mean_squared_error_scorer,
                accuracy=accuracy_scorer, roc_auc=roc_auc_scorer,
+               balanced_accuracy=balanced_accuracy_scorer,
                average_precision=average_precision_scorer,
                log_loss=log_loss_scorer,
                neg_log_loss=neg_log_loss_scorer,
