@@ -219,6 +219,8 @@ METRIC_UNDEFINED_MULTICLASS = [
     "weighted_roc_auc",
     "macro_roc_auc",
     "samples_roc_auc",
+    "matthews_corrcoef_score",
+    "balanced_accuracy_score",
 
     # with default average='binary', multiclass is prohibited
     "precision_score",
@@ -226,8 +228,6 @@ METRIC_UNDEFINED_MULTICLASS = [
     "f1_score",
     "f2_score",
     "f0.5_score",
-    "matthews_corrcoef_score",
-    "balanced_accuracy_score"
 ]
 
 # Metric undefined with "binary" or "multiclass" input
